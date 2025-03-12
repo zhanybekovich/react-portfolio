@@ -2,9 +2,9 @@ import "./menu-burger.scss";
 
 import MenuBurgerImg from "../../assets/menu-burger.svg";
 
-function MenuBurger() {
+function MenuBurger({ onClick }) {
   return (
-    <button type="button" className="menu-burger">
+    <button onClick={onClick} type="button" className="menu-burger">
       <img src={MenuBurgerImg} alt="Toggle menu" />
     </button>
   );
