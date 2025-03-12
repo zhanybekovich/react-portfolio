@@ -1,11 +1,8 @@
 import "./menu-burger.scss";
-
-import MenuBurgerImg from "../../assets/menu-burger.svg";
-
-function MenuBurger({ onClick }) {
+function MenuBurger({ onClick, children }) {
   return (
     <button onClick={onClick} type="button" className="menu-burger">
-      <img src={MenuBurgerImg} alt="Toggle menu" />
+      {children}
     </button>
   );
 }

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./header.scss";
 import MenuBurger from "../MenuBurger/MenuBurger";
+import menuCloseIcon from "../../assets/menuCloseIcon.svg";
+import menuIcon from "../../assets/menu-burger.svg";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,7 +13,13 @@ function Header() {
   return (
     <header className="header">
       <div className="container header-container">
-        <MenuBurger onClick={handleClick} />
+        <MenuBurger onClick={handleClick}>
+          {menuOpen ? (
+            <img src={menuCloseIcon} alt="Close menu" />
+          ) : (
+            <img src={menuIcon} alt="Open menu" />
+          )}
+        </MenuBurger>
         <nav className={menuOpen ? "header-nav active" : "header-nav"}>
           <a className="header-navlink" href="/">
             Home
