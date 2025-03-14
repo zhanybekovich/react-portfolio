@@ -1,5 +1,6 @@
 import "./banner.scss";
 import BannerImg from "../../assets/banner-img.png";
+import AccentBtn from "../AccentBtn/AccentBtn";
 export default function Banner() {
   return (
     <section className="banner">
@@ -11,6 +12,8 @@ export default function Banner() {
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet.
           </p>
+
+          <AccentBtn url="#">Download Resume</AccentBtn>
         </div>
         <img className="banner-img" src={BannerImg} alt="John Doe" />
       </div>
