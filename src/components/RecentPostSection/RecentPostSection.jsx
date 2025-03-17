@@ -24,6 +24,26 @@ const recent_posts = [
           post_category_id: 4,
         },
       },
+      {
+        id: 5,
+        name: "Дизайн",
+        created_at: "2025-03-13T11:51:29.000000Z",
+        updated_at: "2025-03-13T11:51:29.000000Z",
+        pivot: {
+          post_id: 1,
+          post_category_id: 4,
+        },
+      },
+      {
+        id: 6,
+        name: "Hello",
+        created_at: "2025-03-13T11:51:29.000000Z",
+        updated_at: "2025-03-13T11:51:29.000000Z",
+        pivot: {
+          post_id: 1,
+          post_category_id: 4,
+        },
+      },
     ],
   },
   {
@@ -35,7 +55,18 @@ const recent_posts = [
     body: "Он стал припоминать себе: кто бы это сделать? — сказала — Коробочка. Чичиков попросил списочка крестьян. Собакевич согласился охотно и тут не уронил себя: он сказал какой-то комплимент, весьма.",
     created_at: "2025-03-13T11:51:29.000000Z",
     updated_at: "2025-03-13T11:51:29.000000Z",
-    categories: [],
+    categories: [
+      {
+        id: 7,
+        name: "Hello 2",
+        created_at: "2025-03-13T11:51:29.000000Z",
+        updated_at: "2025-03-13T11:51:29.000000Z",
+        pivot: {
+          post_id: 1,
+          post_category_id: 4,
+        },
+      },
+    ],
   },
 ];
 
@@ -49,7 +80,7 @@ export default function RecentPostSection() {
         </div>
         <div className="recent-post-grid">
           {recent_posts.map((post) => (
-            <PostCard post={post} />
+            <PostCard key={post.id} post={post} />
           ))}
         </div>
       </div>
