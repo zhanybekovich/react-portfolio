@@ -2,3 +2,11 @@
   text-align: center;
   padding-bottom: 69px;
 }
+
+.copyright {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #21243d;
+}

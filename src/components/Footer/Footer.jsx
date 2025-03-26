@@ -6,6 +6,9 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className="container">
         <Socials />
+        <p className={styles.copyright}>
+          Все права защищены. &copy; {new Date().getFullYear()} Portfolio.com
+        </p>
       </div>
     </footer>
   );
